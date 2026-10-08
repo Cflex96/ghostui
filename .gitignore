@@ -1,0 +1,10 @@
+# Binaries from `go build`
+/ghostui
+/build/
+*.test
+*.out
+
+# Personal, machine-specific notes for Claude Code
+CLAUDE.local.md
+
+.DS_Store

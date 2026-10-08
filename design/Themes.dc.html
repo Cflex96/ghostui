@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ghostty settings — theme studio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#08080A}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border:1px solid #34343B;border-bottom-width:2px;border-radius:5px;color:#ECEAE4;font-size:11px;background:#17171B;box-sizing:border-box;line-height:1}
+.pl{white-space:pre}
+</style>
+</helmet>
+<div style="width:1200px;height:760px;box-sizing:border-box;background:#0C0C0E;border:1px solid #26262C;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;font-family:'Geist Mono',ui-monospace,'SF Mono',Menlo,monospace;color:#ECEAE4;font-size:13px;line-height:1.55">
+<div style="height:38px;flex-shrink:0;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #1A1A1F;position:relative">
+<span style="width:12px;height:12px;border-radius:50%;background:#FF5F57;display:block"></span>
+<span style="width:12px;height:12px;border-radius:50%;background:#FEBC2E;display:block"></span>
+<span style="width:12px;height:12px;border-radius:50%;background:#28C840;display:block"></span>
+<div style="position:absolute;left:0;right:0;text-align:center;font-size:12px;color:#8C8981">ghostui — themes</div>
+</div>
+
+<div style="flex-grow:1;min-height:0;display:flex;flex-direction:column;gap:20px;padding:24px 34px 18px">
+
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:baseline;gap:8px">
+<span style="font-weight:700;font-size:15px">ghostty</span>
+<span style="color:#5E5C57">/</span>
+<span style="color:#9A978F">settings</span>
+<span style="color:#5E5C57">/</span>
+<span>themes</span>
+</div>
+<div style="display:flex;gap:4px;font-size:12px;background:#141417;border:1px solid #222228;border-radius:8px;padding:3px">
+<span style="padding:2px 12px;border-radius:5px;background:#2A2A30">◐ dark</span>
+<span style="padding:2px 12px;color:#9A978F">○ light</span>
+<span style="padding:2px 12px;color:#9A978F">◑ both</span>
+</div>
+</div>
+
+<div style="flex-grow:1;min-height:0;display:grid;grid-template-columns:330px minmax(0,1fr);gap:28px">
+
+<div style="display:flex;flex-direction:column;gap:12px;min-height:0">
+<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid #2A2A30;border-radius:8px;background:#111114">
+<span style="color:{{accent}};font-weight:700">›</span>
+<span style="color:#5E5C57">type to filter</span>
+<span style="margin-left:auto;font-size:11px;color:#5E5C57">fuzzy</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<sc-for list="{{themes}}" as="t" hint-placeholder-count="5">
+<button type="button" onClick="{{t.pick}}" style="all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:14px minmax(0,1fr);align-items:center;gap:8px;padding:10px 12px;border-radius:8px;cursor:pointer;background:{{t.rowBg}}">
+<span style="color:{{accent}}">{{t.mark}}</span>
+<span style="display:flex;flex-direction:column;gap:6px">
+<span style="color:{{t.nameColor}};font-weight:500">{{t.name}}</span>
+<span style="display:flex;gap:3px">
+<sc-for list="{{t.strip}}" as="s" hint-placeholder-count="8"><span style="width:20px;height:9px;border-radius:2px;background:{{s.c}};display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06)"></span></sc-for>
+</span>
+</span>
+</button>
+</sc-for>
+</div>
+<div style="margin-top:auto;font-size:12px;color:#5E5C57;display:flex;flex-direction:column;gap:2px">
+<span>current</span>
+<span style="color:#9A978F">light:Rose Pine Dawn, dark:Rose Pine</span>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;min-height:0">
+<div style="flex-grow:1;min-height:0;background:{{p.bg}};color:{{p.fg}};border:1px solid #26262C;border-radius:12px;padding:20px 24px;font-size:13px;line-height:1.75;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;font-size:11px;color:{{p.dim}};margin-bottom:10px">
+<span>{{p.name}}</span><span>preview · not applied yet</span>
+</div>
+<div><span style="color:{{p.blue}}">~/code/ghostui</span> <span style="color:{{p.magenta}}">main</span> <span style="color:{{p.green}}">❯</span> git status</div>
+<div>On branch main</div>
+<div>Changes not staged for commit:</div>
+<div class="pl" style="color:{{p.red}}">        modified:   internal/ui/palette.go</div>
+<div class="pl" style="color:{{p.red}}">        modified:   internal/config/parse.go</div>
+<div style="height:10px"></div>
+<div><span style="color:{{p.blue}}">~/code/ghostui</span> <span style="color:{{p.magenta}}">main</span> <span style="color:{{p.yellow}}">±2</span> <span style="color:{{p.green}}">❯</span> go test ./...</div>
+<div class="pl"><span style="color:{{p.green}}">ok  </span>    internal/config   <span style="color:{{p.dim}}">0.41s</span></div>
+<div class="pl"><span style="color:{{p.red}}">FAIL</span>    internal/ui       <span style="color:{{p.dim}}">0.20s</span></div>
+<div style="height:10px"></div>
+<div style="color:{{p.dim}}">// match on doc text, not just keys</div>
+<div><span style="color:{{p.magenta}}">func</span> <span style="color:{{p.blue}}">Match</span>(q <span style="color:{{p.yellow}}">string</span>) []<span style="color:{{p.cyan}}">Option</span> {</div>
+<div><span style="color:{{p.green}}">❯</span> <span style="display:inline-block;width:8px;height:15px;background:{{p.fg}};vertical-align:middle"></span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(8, minmax(0, 1fr));gap:8px">
+<sc-for list="{{p.legend}}" as="c" hint-placeholder-count="8">
+<div style="display:flex;flex-direction:column;gap:5px">
+<span style="height:22px;border-radius:5px;background:{{c.c}};display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08)"></span>
+<span style="font-size:11px;color:#9A978F">{{c.n}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="display:flex;gap:22px;align-items:center;font-size:12px;color:#9A978F;border-top:1px solid #1A1A1F;padding-top:14px">
+<span style="display:flex;gap:7px;align-items:center"><span class="k">↑↓</span>browse</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">⏎</span>apply</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">space</span>pin &amp; compare</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">d</span><span class="k">l</span><span class="k">b</span>dark · light · both</span>
+<span style="margin-left:auto;display:flex;gap:7px;align-items:center"><span class="k">esc</span>back</span>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF7A3D","options":["#FF7A3D","#8AB4FF","#B794F6","#7DD3B0"]},"$preview":{"width":1200,"height":760}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { picked: 'rp' };
+}
+renderVals() {
+const T = [
+{ id: 'rp', name: 'Rose Pine', bg: '#191724', fg: '#e0def4', red: '#eb6f92', green: '#31748f', yellow: '#f6c177', blue: '#9ccfd8', magenta: '#c4a7e7', cyan: '#ebbcba', dim: '#6e6a86' },
+{ id: 'cm', name: 'Catppuccin Mocha', bg: '#1e1e2e', fg: '#cdd6f4', red: '#f38ba8', green: '#a6e3a1', yellow: '#f9e2af', blue: '#89b4fa', magenta: '#f5c2e7', cyan: '#94e2d5', dim: '#6c7086' },
+{ id: 'tn', name: 'Tokyo Night', bg: '#1a1b26', fg: '#c0caf5', red: '#f7768e', green: '#9ece6a', yellow: '#e0af68', blue: '#7aa2f7', magenta: '#bb9af7', cyan: '#7dcfff', dim: '#565f89' },
+{ id: 'gb', name: 'Gruvbox Dark', bg: '#282828', fg: '#ebdbb2', red: '#fb4934', green: '#b8bb26', yellow: '#fabd2f', blue: '#83a598', magenta: '#d3869b', cyan: '#8ec07c', dim: '#928374' },
+{ id: 'nd', name: 'Nord', bg: '#2e3440', fg: '#d8dee9', red: '#bf616a', green: '#a3be8c', yellow: '#ebcb8b', blue: '#81a1c1', magenta: '#b48ead', cyan: '#88c0d0', dim: '#616e88' }
+];
+const sel = T.find((t) => t.id === this.state.picked) || T[0];
+const strip = (t) => [t.bg, t.red, t.green, t.yellow, t.blue, t.magenta, t.cyan, t.fg].map((c) => ({ c }));
+return {
+accent: this.props.accent ?? '#FF7A3D',
+themes: T.map((t) => {
+const on = t.id === sel.id;
+return {
+name: t.name,
+strip: strip(t),
+mark: on ? '▌' : '',
+rowBg: on ? '#1D1D22' : 'transparent',
+nameColor: on ? '#ECEAE4' : '#9A978F',
+pick: () => this.setState({ picked: t.id })
+};
+}),
+p: Object.assign({}, sel, {
+legend: [
+{ c: sel.bg, n: 'bg' }, { c: sel.fg, n: 'fg' }, { c: sel.red, n: 'red' }, { c: sel.green, n: 'green' },
+{ c: sel.yellow, n: 'yellow' }, { c: sel.blue, n: 'blue' }, { c: sel.magenta, n: 'magenta' }, { c: sel.cyan, n: 'cyan' }
+]
+})
+};
+}
+}
+</script>
+</body>
+</html>

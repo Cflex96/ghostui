@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ghostty settings — palette</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#08080A}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border:1px solid #34343B;border-bottom-width:2px;border-radius:5px;color:#ECEAE4;font-size:11px;background:#17171B;box-sizing:border-box;line-height:1}
+.pl{white-space:pre}
+</style>
+</helmet>
+<div style="width:1200px;height:760px;box-sizing:border-box;background:#0C0C0E;border:1px solid #26262C;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;font-family:'Geist Mono',ui-monospace,'SF Mono',Menlo,monospace;color:#ECEAE4;font-size:13px;line-height:1.55">
+<div style="height:38px;flex-shrink:0;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #1A1A1F;position:relative">
+<span style="width:12px;height:12px;border-radius:50%;background:#FF5F57;display:block"></span>
+<span style="width:12px;height:12px;border-radius:50%;background:#FEBC2E;display:block"></span>
+<span style="width:12px;height:12px;border-radius:50%;background:#28C840;display:block"></span>
+<div style="position:absolute;left:0;right:0;text-align:center;font-size:12px;color:#8C8981">ghostui — ~/.config/ghostty</div>
+</div>
+
+<div style="flex-grow:1;position:relative;min-height:0">
+
+<div style="position:absolute;top:0;left:0;right:0;bottom:0;padding:24px 34px;display:flex;flex-direction:column;gap:14px;opacity:0.16">
+<div style="font-weight:700;font-size:15px">ghostty <span style="color:#9A978F;font-weight:400">/ settings</span></div>
+<div style="height:28px;width:420px;background:#2A2A30;border-radius:6px"></div>
+<div style="margin-left:334px;display:flex;flex-direction:column;gap:14px">
+<div class="pl">theme                Rose Pine Dawn ◐ Rose Pine</div>
+<div class="pl">font-family          Berkeley Mono</div>
+<div class="pl">font-size            14</div>
+<div class="pl">background-opacity   0.92</div>
+<div class="pl">window-padding-x     16</div>
+<div class="pl">cursor-style         bar</div>
+<div class="pl">macos-titlebar-style tabs</div>
+</div>
+</div>
+<div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(6,6,8,0.5)"></div>
+
+<div style="position:absolute;left:250px;top:56px;width:700px;background:#121215;border:1px solid #2E2E35;border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,0.65);overflow:hidden">
+
+<div style="display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #222228;font-size:16px">
+<span style="color:{{accent}};font-weight:700">›</span>
+<span style="display:flex;align-items:center;gap:2px"><span>opac</span><span style="width:9px;height:19px;background:{{accent}};display:block"></span></span>
+<span style="margin-left:auto;font-size:12px;color:#5E5C57">4 matches</span>
+</div>
+
+<div style="padding:8px;display:flex;flex-direction:column;gap:2px">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 76px 84px;align-items:center;padding:9px 14px;border-radius:8px;background:#1D1D22">
+<span>background-<span style="color:{{accent}};font-weight:700">opac</span>ity</span>
+<span style="justify-self:start;font-size:11px;color:#9A978F;border:1px solid #33333A;border-radius:4px;padding:0 6px">float</span>
+<span style="text-align:right">0.92 <span style="color:{{accent}}">•</span></span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 76px 84px;align-items:center;padding:9px 14px;border-radius:8px;color:#B9B6AE">
+<span>background-<span style="color:{{accent}};font-weight:700">opac</span>ity-cells</span>
+<span style="justify-self:start;font-size:11px;color:#9A978F;border:1px solid #33333A;border-radius:4px;padding:0 6px">bool</span>
+<span style="text-align:right;color:#5E5C57">false</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 76px 84px;align-items:center;padding:9px 14px;border-radius:8px;color:#B9B6AE">
+<span>unfocused-split-<span style="color:{{accent}};font-weight:700">opac</span>ity</span>
+<span style="justify-self:start;font-size:11px;color:#9A978F;border:1px solid #33333A;border-radius:4px;padding:0 6px">float</span>
+<span style="text-align:right;color:#5E5C57">0.70</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 76px 84px;align-items:center;padding:9px 14px;border-radius:8px;color:#B9B6AE">
+<span>background-blur <span style="font-size:11px;color:#5E5C57">· matched in docs</span></span>
+<span style="justify-self:start;font-size:11px;color:#9A978F;border:1px solid #33333A;border-radius:4px;padding:0 6px">int</span>
+<span style="text-align:right">20 <span style="color:{{accent}}">•</span></span>
+</div>
+</div>
+
+<div style="border-top:1px solid #222228;padding:20px 22px;display:flex;flex-direction:column;gap:16px">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:24px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:10px">
+<span style="font-size:26px;font-weight:600;letter-spacing:-0.02em">0.92</span>
+<span style="color:#5E5C57;font-size:12px">default 1</span>
+</div>
+<div style="position:relative;height:4px;background:#2A2A30;border-radius:2px;margin:6px 0">
+<div style="width:92%;height:4px;background:{{accent}};border-radius:2px"></div>
+<div style="position:absolute;left:92%;top:-6px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:#ECEAE4;box-shadow:0 0 0 5px rgba(255,255,255,0.08)"></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:11px;color:#5E5C57"><span>0</span><span>.25</span><span>.5</span><span>.75</span><span>1</span></div>
+</div>
+<div style="height:104px;border-radius:9px;overflow:hidden;padding:12px;box-sizing:border-box;background-color:#24242A;background-image:repeating-conic-gradient(#34343C 0% 25%, transparent 0% 50%);background-size:16px 16px">
+<div style="height:100%;border-radius:6px;background:rgba(25,23,36,0.92);padding:8px 10px;box-sizing:border-box;font-size:11.5px;line-height:1.6;color:#e0def4">
+<div><span style="color:#31748f">❯</span> ls</div>
+<div class="pl"><span style="color:#9ccfd8">cmd  internal</span>  go.mod</div>
+<div><span style="color:#31748f">❯</span> <span style="display:inline-block;width:6px;height:12px;background:#e0def4;vertical-align:middle"></span></div>
+</div>
+</div>
+</div>
+<div style="color:#B9B6AE;font-size:12.5px">The opacity level of the background, from 0 (fully transparent) to 1 (opaque). Pairs well with <span style="color:#ECEAE4">background-blur</span>.</div>
+</div>
+
+<div style="display:flex;gap:18px;align-items:center;padding:12px 22px;border-top:1px solid #222228;background:#0F0F12;font-size:12px;color:#9A978F">
+<span style="display:flex;gap:7px;align-items:center"><span class="k">←→</span>adjust</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">⇧←→</span>fine</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">⏎</span>commit</span>
+<span style="display:flex;gap:7px;align-items:center"><span class="k">⌫</span>default</span>
+<span style="margin-left:auto;display:flex;gap:7px;align-items:center"><span class="k">esc</span>close</span>
+</div>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF7A3D","options":["#FF7A3D","#8AB4FF","#B794F6","#7DD3B0"]},"$preview":{"width":1200,"height":760}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#FF7A3D' };
+}
+}
+</script>
+</body>
+</html>
